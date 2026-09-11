@@ -1,41 +1,36 @@
-# Week 2 - S2 Java Practice Problems
+# Week 5 - S5 - OOP Fundamental Practice Problems
 
-This repository contains five Java programs covering loops, strings, character
-validation, arrays, `StringBuilder`, and formatted output.
+Five Java practice problems covering arrays, methods, nested loops, method overloading, constructors, encapsulation, and `Comparable`.
 
-## Programs
+## Problems
 
-1. **Vowel and Consonant Counter**
-   - Counts vowels and consonants in a title while ignoring spaces.
-2. **CSV Student Record Parser**
-   - Validates and formats a three-field student record.
-3. **File Extension Validator**
-   - Accepts `pdf`, `docx`, and `zip` extensions without case sensitivity.
-4. **Masked Phone Number Formatter**
-   - Validates a ten-digit phone number and masks its first six digits.
-5. **Bank Transaction Reference Generator and Validator**
-   - Normalizes, validates, and formats a fourteen-character transaction reference.
+### Problem 1 - Hackathon Score Curve Booster
 
-## Compile
+Adds a flat bonus to every score in the original array and prints the result with `Arrays.toString(...)`.
 
-From the repository root, run:
+### Problem 2 - Duplicate Team Name Finder
 
-```powershell
-Get-ChildItem -Directory Question* | ForEach-Object {
-    Push-Location $_.FullName
-    javac *.java
-    Pop-Location
-}
-```
+Uses plain nested loops to find and report the first duplicate team name.
 
-Each command creates a `.class` file beside its `.java` file.
+### Problem 3 - Top-3 Podium Finder
 
-## Run
+Finds the three highest scores in one pass without sorting the input array.
+
+### Problem 4 - Hackathon Seating Grid Optimizer
+
+Classifies each seating row as a `Quiet Zone` or `Buzzing Zone` using the private `rowAverage(...)` helper.
+
+### Problem 5 - Placement Drive Shortlisting & Ranking Engine
+
+Uses overloaded `isEligible(...)` methods and sorts shortlisted `Candidate` objects by descending composite score through `Comparable<Candidate>`.
+
+## Run a Problem
+
+From the selected problem folder, compile and run with:
 
 ```powershell
-java -cp Question1_VowelConsonantCounter VowelConsonantCounter
-java -cp Question2_CSVStudentRecordParser CSVStudentRecordParser
-java -cp Question3_FileExtensionValidator FileExtensionValidator
-java -cp Question4_MaskedPhoneNumberFormatter MaskedPhoneNumberFormatter
-java -cp Question5_BankTransactionReference BankTransactionReference
+javac Main.java
+java Main
 ```
+
+Each folder contains the Java source file and the generated class file.
